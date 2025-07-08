@@ -1,0 +1,262 @@
+/* Prizes Section */
+.prizes-section {
+  background-color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.prizes-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M20 20h10v10H20zM60 20h10v10H60zM40 60h10v10H40z" fill="rgba(255,107,107,0.05)"/></svg>');
+  background-size: 200px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.prizes-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.prize-card {
+  background: linear-gradient(145deg, #222222, #1e1e1e);
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.prize-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.prize-card:hover::before {
+  transform: scaleX(1);
+}
+
+.prize-card.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prize-card.featured {
+  border: 2px solid var(--accent);
+  transform: scale(1.05) translateY(15px);
+  box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
+}
+
+.prize-card.featured.fade-in-visible {
+  transform: scale(1.05) translateY(0);
+}
+
+.prize-card.featured .prize-icon-container {
+  background: rgba(255, 107, 107, 0.2);
+  border: 2px solid var(--accent);
+}
+
+.prize-card.featured .prize-icon {
+  color: var(--accent);
+}
+
+.prize-icon-container {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.prize-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.prize-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.prize-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.prize-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Special Prizes */
+.special-prizes {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.special-prizes-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.special-prizes-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+}
+
+.special-prizes-title.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.special-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.special-prize-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.special-prize-card.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.special-prize-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent);
+}
+
+.special-prize-card h4 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.special-prize-card .prize-amount {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.special-prize-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.note {
+  text-align: center;
+  margin-top: 60px;
+  font-style: italic;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.note.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .prize-card {
+    min-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .prize-card {
+    min-width: calc(50% - 20px);
+  }
+  
+  .prize-card.featured {
+    order: -1;
+    min-width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prize-card {
+    min-width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .special-prizes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .special-prizes-grid {
+    grid-template-columns: 1fr;
+  }
+}
