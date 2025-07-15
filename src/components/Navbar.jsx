@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import '../components/styles/navbar.css';
 
 const Navbar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
@@ -33,20 +34,27 @@ const Navbar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
         height: '100%'
       }}>
         <div className="navbar-logo">
-          <Link 
-            to="home" 
-            smooth={true} 
-            duration={500}
-          >
+          <Link to="/" onClick={closeMobileMenu}>
             <span className="logo-text">Hack</span>
             <span className="logo-highlight">Hyderabad</span>
           </Link>
         </div>
 
         <div className="nav-cta">
-          <a href="#register" className="btn btn-primary">
-            Register Now
-          </a>
+          <ScrollLink 
+            to="register" 
+            smooth={true} 
+            duration={500} 
+            className="btn btn-primary"
+            onClick={closeMobileMenu}
+            style={{
+              whiteSpace: 'nowrap',
+              padding: '0.5rem 1rem',
+              fontSize: '0.9rem'
+            }}
+          >
+            Register (₹200/team)
+          </ScrollLink>
         </div>
       </div>
     </nav>

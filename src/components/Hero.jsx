@@ -17,17 +17,26 @@ const Hero = () => {
             </p>
             <div className="cta-buttons">
               <a href="#register" className="btn btn-primary">
-                Register Now
+                Register Now (₹200 per team)
               </a>
               <a href="#about" className="btn btn-outline">
                 Learn More
               </a>
+              <p className="registration-note" style={{
+                fontSize: '0.85rem',
+                marginTop: '0.5rem',
+                opacity: 0.9,
+                maxWidth: '400px',
+                lineHeight: '1.4'
+              }}>
+                * Registration fee of ₹200 per team is required to participate in the hackathon.
+              </p>
             </div>
           </div>
           <div className="hero-image">
             <div className="glow"></div>
             <div className="prize-badge">
-              <span className="prize-amount">₹1.5 LAKHS</span>
+              <span className="prize-amount">₹1.5 LAKH  </span>
               <span className="prize-label">Prize Pool</span>
             </div>
           </div>

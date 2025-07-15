@@ -20,7 +20,15 @@ const Faq = () => {
     },
     {
       question: 'Is there a registration fee?',
-      answer: 'No, participation in Hack Hyderabad is completely free of charge. We provide food, swag, and a great experience at no cost to participants.'
+      answer: 'Yes, there is a registration fee of ₹499 per team. This helps us cover the costs of the event and provide a better experience for all participants. The fee includes meals, swag, and access to all event activities.'
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept online payments through UPI, credit/debit cards, and net banking. Payment details will be provided after you complete the registration form.'
+    },
+    {
+      question: 'Is the registration fee refundable?',
+      answer: 'The registration fee is non-refundable. However, if the event is canceled by the organizers, full refunds will be issued to all registered participants.'
     },
     {
       question: 'Do I need a team?',

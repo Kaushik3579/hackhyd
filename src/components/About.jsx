@@ -61,8 +61,8 @@ const About = () => {
           <div className="about-image fade-in">
             <div className="image-container">
               <div className="glow"></div>
-              <div className="image-placeholder">
-                <span>Event Venue</span>
+              <div className="venue-image-container">
+                <img src="/images/logo.jpg" alt="CBIT Hyderabad Campus" className="venue-photo" />
               </div>
             </div>
             <div className="highlight-box">
@@ -71,6 +71,21 @@ const About = () => {
                 <h4>Win Amazing Prizes</h4>
                 <p>Compete for a prize pool of ₹1.5 Lakhs+ and exciting goodies</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Venue Section */}
+        <div className="venue-section">
+          <h2>Venue</h2>
+          <div className="venue-content">
+            <div className="venue-image">
+              <img src="/images/cbitlogo.jpeg" alt="CBIT Hyderabad Campus" className="venue-photo" />
+            </div>
+            <div className="venue-details">
+              <h3>Chaitanya Bharathi Institute of Technology (CBIT)</h3>
+              <p>Gandipet, Hyderabad, Telangana 500075</p>
+              <p>One of the premier technical institutions in Hyderabad, CBIT provides the perfect environment for innovation and learning.</p>
             </div>
           </div>
         </div>
